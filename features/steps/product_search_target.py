@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
+from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 SIDE_NAV_ADD_TO_CART_BTN = (By.CSS_SELECTOR, "[data-test='content-wrapper'] [id*='addToCart']")
@@ -33,7 +34,8 @@ def store_product_name(context):
 
 @when('Confirm Add to Cart button from side navigation')
 def side_nav_click_add_to_cart(context):
-    context.driver.find_element(*SIDE_NAV_ADD_TO_CART_BTN).click()
+    context.driver.wait.until(Ec.element_to_be_clickable(SIDE_NAV_ADD_TO_CART_BTN)).click()
+    #context.driver.find_element(*SIDE_NAV_ADD_TO_CART_BTN).click()
     sleep(10)
 
 @when('open the cart and checkout')
