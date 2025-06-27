@@ -1,5 +1,4 @@
 Feature: Target help page UI
-
   Scenario Outline:Verify UI elements are present on the Target help page
     Given open Target help page
     Then verify <UI element>

@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 
-
 @then("From right side navigation menu, click Sign In")
 def verify_navigation_menu(context):
     context.driver.find_element(By.CSS_SELECTOR, "[data-test='accountNav-signIn']").click()

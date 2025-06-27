@@ -1,7 +1,5 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
-from time import sleep
-
 
 @given('open the target circle page')
 def open_circle(context):

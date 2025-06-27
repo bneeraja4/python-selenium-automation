@@ -15,6 +15,7 @@ def search_product(context, search_word):
     context.driver.find_element(*SEARCH_FIELD).send_keys(search_word)
     context.driver.find_element(*SEARCH_BTN).click()
 
+
 @then('Verify search worked for {product}')
 def verify_search_results(context, product):
     actual_text = context.driver.find_element(*SEARCH_RESULT_TEXT).text
@@ -29,6 +30,7 @@ def click_add_to_cart(context):
 def store_product_name(context):
     context.product_name = context.driver.find_element(*SIDE_NAV_PRODUCT_NAME).text
     print('Product name stored: ', context.product_name)
+
 
 @when('Confirm Add to Cart button from side navigation')
 def side_nav_click_add_to_cart(context):
