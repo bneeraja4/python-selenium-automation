@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 from behave import given, when, then
 from time import sleep
 
@@ -24,7 +25,7 @@ def verify_search_results(context, product):
 @when('Click on Add to Cart button')
 def click_add_to_cart(context):
     context.driver.find_element(*ADD_TO_CART_BTN).click()  # always clicks on 1st Add to cart context
-    sleep(10)
+    context.driver.wait.until(EC.visibility_of_element_located(SIDE_NAV_PRODUCT_NAME),message='Product name was not visible')
 
 @when('Store product name')
 def store_product_name(context):

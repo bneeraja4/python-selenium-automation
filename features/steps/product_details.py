@@ -10,7 +10,7 @@ SELECTED_COLOR = (By.CSS_SELECTOR, "[data-test='@web/VariationComponent'] div")
 @given('Open target product A-91269718 page')
 def open_target(context):
     context.driver.get(f'https://www.target.com/p/wranglers-men-39-s-relaxed-fit-straight-jeans/-/A-91269718?preselect=90919011#lnk=sametab')
-    sleep(8)
+    sleep(5)
 
 
 @then('Verify user can click through colors')

@@ -13,6 +13,7 @@ Feature: Tests for Target Search
 #    Given Open target main page
 #    When Search for coffee
 #    Then Verify search worked for coffee
+
   Scenario Outline: User can search for a product
     Given Open target main page
     When Search for <search_word>

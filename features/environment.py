@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 
-
 def browser_init(context):
     """
     :param context: Behave context
