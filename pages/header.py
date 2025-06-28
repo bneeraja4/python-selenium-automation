@@ -3,7 +3,6 @@ from time import sleep
 
 from pages.base_page import Page
 
-
 class Header(Page):
     SEARCH_FIELD = (By.ID, 'search')
     SEARCH_BTN = (By.XPATH, "//button[@data-test='@web/Search/SearchButton']")

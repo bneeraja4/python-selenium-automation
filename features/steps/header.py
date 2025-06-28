@@ -5,7 +5,7 @@ from time import sleep
 
 #SEARCH_FIELD = (By.ID, 'search')
 #SEARCH_BTN = (By.XPATH, "//button[@data-test='@web/Search/SearchButton']")
-#CART_ICON = (By.CSS_SELECTOR, "[data-test='@web/CartLink']")
+CART_ICON = (By.CSS_SELECTOR, "[data-test='@web/CartIcon']")
 HEADER_LINKS = (By.CSS_SELECTOR, "[data-test*='@web/GlobalHeader/UtilityHeader/']")
 
 

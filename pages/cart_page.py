@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 
 from pages.base_page import Page
 
-
 class CartPage(Page):
     # Copy
     cart_empty_txt = 'Your cart is empty'
