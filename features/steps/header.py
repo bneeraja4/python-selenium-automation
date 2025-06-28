@@ -5,7 +5,7 @@ from time import sleep
 
 #SEARCH_FIELD = (By.ID, 'search')
 #SEARCH_BTN = (By.XPATH, "//button[@data-test='@web/Search/SearchButton']")
-CART_ICON = (By.CSS_SELECTOR, "[data-test='@web/CartIcon']")
+CART_ICON = (By.CSS_SELECTOR, "[data-test='@web/CartLink']")
 HEADER_LINKS = (By.CSS_SELECTOR, "[data-test*='@web/GlobalHeader/UtilityHeader/']")
 
 
@@ -15,9 +15,9 @@ HEADER_LINKS = (By.CSS_SELECTOR, "[data-test*='@web/GlobalHeader/UtilityHeader/'
 #    context.driver.find_element(*SEARCH_BTN).click()
 #    sleep(10)
 
-#@when('Click on Cart icon')
-#def click_cart(context):
-#    context.driver.find_element(By.CSS_SELECTOR,"[data-test='@web/CartIcon']").click()
+@when('Click on Cart icon')
+def click_cart(context):
+    context.app.header.click_cart()
 
 
 
