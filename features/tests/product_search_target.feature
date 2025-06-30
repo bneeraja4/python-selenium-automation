@@ -1,4 +1,5 @@
 Feature: Tests for Target Search
+
   Scenario: User can search for tea
     Given Open target main page
     When Search for tea

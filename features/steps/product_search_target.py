@@ -11,15 +11,15 @@ SEARCH_FIELD = (By.ID, 'search')
 SEARCH_BTN = (By.XPATH, "//button[@data-test='@web/Search/SearchButton']")
 SEARCH_RESULT_TEXT = (By.XPATH, "//div[@data-test='lp-resultsCount']")
 
-@when('Search for {search_word}')
-def search_product(context, search_word):
-    context.app.header.search_product(search_word)
+# @when('Search for {search_word}')
+# def search_product(context, search_word):
+#     context.app.header.search_product(search_word)
     #context.driver.find_element(*SEARCH_FIELD).send_keys(search_word)
     #context.driver.find_element(*SEARCH_BTN).click()
 
 
 @then('Verify search worked for {product}')
-def verify_search_results(context, product):
+def verify_search_results(context,product):
     context.app.search_results_page.verify_search_results(product)
     #actual_text = context.driver.find_element(*SEARCH_RESULT_TEXT).text
     #assert product in actual_text, f"Error, expected {product} not in actual {actual_text}"
