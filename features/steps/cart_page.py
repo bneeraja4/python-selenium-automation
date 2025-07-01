@@ -3,8 +3,7 @@ from behave import given, when, then
 
 @when('Open cart page')
 def open_cart(context):
-    context.driver.get('https://www.target.com/cart')
-
+    context.app.cart_page.open_cart()
 
 @then('Verify cart has correct product')
 def verify_product_name(context):
@@ -14,7 +13,6 @@ def verify_product_name(context):
 
     assert context.product_name[:20] == product_name_in_cart[:20], \
         f'Expected {context.product_name[:20]} did not match {product_name_in_cart[:20]}'
-
 
 @then('Verify cart has {amount} item(s)')
 def verify_cart_items(context, amount):
@@ -29,3 +27,7 @@ def verify_cart_empty(context):
 @then('Verify Cart page opened')
 def verify_cart_opened(context):
     context.app.cart_page.verify_cart_opened()
+
+@then('Verify cart should contain at least one item')
+def verify_cart_items(context):
+    context.app.cart_page.verify_item_added()

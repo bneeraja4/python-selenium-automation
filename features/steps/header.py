@@ -16,6 +16,10 @@ PRODUCT_IMG = (By.CSS_SELECTOR, 'img')
 def search_product(context, search_word):
     context.app.header.search_product(search_word)
 
+@when('Click Account')
+def click_account(context):
+    #context.driver.find_element(By.XPATH, "//span[text()='Account']").click()
+    context.app.header.click_account()
 
 @when('Click on Cart icon')
 def click_cart(context):

@@ -26,18 +26,21 @@ def verify_search_results(context,product):
 
 @when('Click on Add to Cart button')
 def click_add_to_cart(context):
-    context.driver.find_element(*ADD_TO_CART_BTN).click()  # always clicks on 1st Add to cart context
-    context.driver.wait.until(EC.visibility_of_element_located(SIDE_NAV_PRODUCT_NAME),message='Product name was not visible')
+    context.app.product_page.click_add_to_cart()
+    # context.driver.find_element(*ADD_TO_CART_BTN).click()  # always clicks on 1st Add to cart context
+    # context.driver.wait.until(EC.visibility_of_element_located(SIDE_NAV_PRODUCT_NAME),message='Product name was not visible')
 
 @when('Store product name')
 def store_product_name(context):
-    context.product_name = context.driver.find_element(*SIDE_NAV_PRODUCT_NAME).text
-    print('Product name stored: ', context.product_name)
+    context.app.product_page.store_product_name()
+    #context.product_name = context.driver.find_element(*SIDE_NAV_PRODUCT_NAME).text
+    #print('Product name stored: ', context.product_name)
 
 
 @when('Confirm Add to Cart button from side navigation')
 def side_nav_click_add_to_cart(context):
-    context.driver.find_element(*SIDE_NAV_ADD_TO_CART_BTN).click()
+    context.app.product_page.side_nav_click_add_to_cart()
+    #context.driver.find_element(*SIDE_NAV_ADD_TO_CART_BTN).click()
     sleep(10)
 
 @when('open the cart and checkout')
